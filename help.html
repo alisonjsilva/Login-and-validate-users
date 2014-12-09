@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Help Login Class</title>
+<style>
+body {
+	font-family: verdana;
+}
+.title {
+	background-color:#666;
+	padding: 10px;
+	font-size: 20px;
+}
+.info {
+	padding: 10px;
+	font-size:16px;
+}
+.code {
+	font-size: 12px;
+	background-color:#E1E1E1;
+	padding:10px;
+}
+</style>
+</head>
+<body>
+<div>
+	The objective for this class is offer the most simple way to create a login system in your site. <br/>
+	If you dont understand how OOP works, you only need use the example and this help for you have one login system work in you site.
+	<br/>
+	----
+	<br/>
+</div>
+
+<div class="title">Login:</div>
+<div class="info">
+	<span>
+		For login you only need create the form with username and password inputs. Need to create a hidden field with "dologin" name.<br/>
+	</span>
+	<div class="code">
+			&lt;input type="text" name="username" /&gt;
+	</div>
+	<div class="code">
+			&lt;input type="text" name="password" /&gt;
+	</div>
+	<div class="code">
+			&lt;input type="hidden" name="dologin" value="dologin" /&gt;
+	</div>
+</div>
+<div class="title">Logout:</div>
+<div class="info">
+	<span>
+		For logout you only need create the form with input hidden with name "dologout".
+	</span>
+	<div class="code">
+			&lt;input type="hidden" name="dologout" value="dologout" &gt;
+	</div>
+</div>
+<div class="title">Redirect:</div>
+<div class="info">
+	<span>
+		For redirect you need create a input hidden with name "redirect" and value for url you want redirect the user after login or logout.
+	</span>
+	<div class="code">
+			&lt;input type="hidden" name="redirect" value="#loged" &gt;
+	</div>
+</div>
+<div class="title">Place Messages:</div>
+<div class="info">
+	<div class="code">
+			&lt;div class="message">&lt;?php echo $login->message; ?&gt;&lt;/div&gt;
+	</div>
+</div>
+
+<div class="title">Init Class HandlerForm:</div>
+<div class="info">
+	<div class="code">
+			$login = new HandlerForm();
+	</div>
+</div>
+<div class="title">Init Class ValidateUser:</div>
+<div class="info">
+	<div class="code">
+			$user = new ValidateUser();
+	</div>
+</div>
+<div class="title">Get Username:</div>
+<div class="info">
+	<div class="code">
+			$user->getUserName();
+	</div>
+</div>
+<div class="title">Get UserID:</div>
+<div class="info">
+	<div class="code">
+			$user->getUserId();
+	</div>
+</div>
+<div class="title">Login with email:</div>
+<div class="info">
+	<span class="info">
+		If you dont allow user login with email, change EMAIL_LOGIN to false. <br/>
+		Default is true.
+	</span>
+	<div class="code">
+			define("EMAIL_LOGIN", true);
+	</div>
+</div>
+</body>
+</html>
